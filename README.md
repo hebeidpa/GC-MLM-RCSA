@@ -15,6 +15,7 @@ Despite curative gastrectomy, a substantial proportion of gastric cancer patient
 Radiological images provide macroscopic information about tumor morphology and surrounding tissues, while histopathological whole-slide images capture microscopic tumor characteristics. However, models based on a single modality are often insufficient to comprehensively characterize tumor heterogeneity.
 
 To address this issue, we propose a **multimodal radiopathomics framework** that jointly models radiological and pathological data to predict postoperative MLM risk.
+![acf2b2e8e8d1f81d62b7984f587eb114](https://github.com/user-attachments/assets/a5b9cb43-8319-48c3-9de7-5a6970d18131)
 
 ---
 
