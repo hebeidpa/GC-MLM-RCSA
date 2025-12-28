@@ -60,6 +60,7 @@ Typical preprocessing includes:
 #### Step 2: Gastric Region Segmentation
 CT images and corresponding gastric segmentation labels should be organized according to the nnU-Net v2 dataset format.
 A typical dataset structure is:
+```plaintext
 nnUNet_raw/
 └── DatasetXXX_GastricCT/
     ├── imagesTr/
@@ -69,9 +70,11 @@ nnUNet_raw/
     │   ├── case_001.nii.gz
     │   ├── case_002.nii.gz
     └── dataset.json
+```
 rain an nnU-Net model using the default 3D full-resolution configuration:
+```plaintext
       nnUNetv2_train DatasetXXX 3d_fullres nnUNetTrainerV2 0
-
+```
 #### Step 3: Radiological Feature Extraction
 Radiological features are extracted from the segmented gastric regions.
 
