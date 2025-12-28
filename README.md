@@ -47,7 +47,8 @@ The two modules are executed independently and their outputs are subsequently fu
 
 ### 1. Radiology Module (CT-based)
 
-The radiology module is used to process CT images and extract radiological features.
+The radiology module is implemented using the **nnU-Net framework (v2)**, which is a widely used self-configuring method for medical image segmentation (https://github.com/MIC-DKFZ/nnUNet).  
+In this work, nnU-Net is adopted for automatic gastric region segmentation on CT images.
 
 #### Step 1: CT Preprocessing
 CT images should be converted to a unified format and resolution prior to analysis.
@@ -57,12 +58,24 @@ Typical preprocessing includes:
 - Resampling to a fixed voxel spacing
 
 #### Step 2: Gastric Region Segmentation
-A trained gastric segmentation model is applied to CT images to obtain gastric region masks.
-
-The segmentation output is used to define regions of interest for downstream feature extraction.
+CT images and corresponding gastric segmentation labels should be organized according to the nnU-Net v2 dataset format.
+A typical dataset structure is:
+nnUNet_raw/
+└── DatasetXXX_GastricCT/
+    ├── imagesTr/
+    │   ├── case_001_0000.nii.gz
+    │   ├── case_002_0000.nii.gz
+    ├── labelsTr/
+    │   ├── case_001.nii.gz
+    │   ├── case_002.nii.gz
+    └── dataset.json
+rain an nnU-Net model using the default 3D full-resolution configuration:
+      nnUNetv2_train DatasetXXX 3d_fullres nnUNetTrainerV2 0
 
 #### Step 3: Radiological Feature Extraction
 Radiological features are extracted from the segmented gastric regions.
+
+Specifically, the segmentation masks are used as regions of interest (ROIs), and radiomics features are computed using the **PyRadiomics** module integrated in **3D Slicer**. 
 
 The output of this module is a patient-level radiological feature representation.
 
