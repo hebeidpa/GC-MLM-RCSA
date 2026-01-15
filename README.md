@@ -135,6 +135,41 @@ python h5_to_csv.py
 - Feature fusion and prediction require matched patient identifiers
 - Pretrained models and example datasets are not publicly released due to data privacy constraints
 ## Acknowledgements
- - We would like to express our sincere gratitude to all contributors and collaborators who supported this project. Special thanks to our research  - team members for their invaluable discussions and technical insights, which greatly enhanced the development and implementation of this work.
 
- - We also acknowledge the open-source community and developers of libraries such as PyTorch, OpenSlide, and scikit-learn, whose efforts made it possible to build and refine our models efficiently. Finally, we are grateful to the institutions and organizations that provided the datasets and computational resources necessary for completing this project.
+We would like to express our sincere gratitude to all contributors and collaborators who supported this project. 
+Special thanks to our research team members for their invaluable discussions and technical insights, which greatly enhanced the development and implementation of this work.
+
+We also acknowledge the open-source community and developers of several foundational frameworks and libraries that made this work possible. 
+In particular, we thank the authors of **UNI**, a general-purpose foundation model for computational pathology, which was used for patch-level feature extraction in the pathology branch, and **nnU-Net**, a self-configuring deep learning framework adopted for automatic gastric region segmentation in the radiology branch.
+
+Additionally, we acknowledge the developers of PyTorch, OpenSlide, scikit-learn, and related open-source tools for their indispensable contributions.
+Finally, we are grateful to the institutions and organizations that provided the datasets and computational resources necessary for completing this project.
+## Reference
+
+We thank the authors and developers of the following projects for their outstanding contributions:
+
+- **UNI**: Towards a General-Purpose Foundation Model for Computational Pathology  
+  Chen, R. J., Ding, T., Lu, M. Y., et al. *Nature Medicine*, 30, 850–862 (2024).  
+  https://doi.org/10.1038/s41591-024-02857-3
+        
+        
+        
+        
+        
+        
+        
+          
+
+- **nnU-Net**: A Self-Configuring Method for Deep Learning-Based Biomedical Image Segmentation  
+  Isensee, F., Jaeger, P. F., Kohl, S. A. A., Petersen, J., & Maier-Hein, K. H.  
+  *Nature Methods*, 18(2), 203–211 (2021).  
+  https://doi.org/10.1038/s41592-020-01008-z
+        
+        
+        
+        
+        
+        
+        
+          
+
