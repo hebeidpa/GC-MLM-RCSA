@@ -76,9 +76,15 @@ rain an nnU-Net model using the default 3D full-resolution configuration:
 ```plaintext
       nnUNetv2_train DatasetXXX 3d_fullres nnUNetTrainerV2 0
 ```
+
 #### Step 3: Radiological Feature Extraction
 Radiological features are extracted from the segmented gastric regions.
 
+### Pretrained nnU-Net Weights
+
+Pretrained nnU-Net weights for gastric region segmentation are available via GitHub Releases:
+
+https://github.com/hebeidpa/GC-MLM-RCSA/releases
 Specifically, the segmentation masks are used as regions of interest (ROIs), and radiomics features are computed using the **PyRadiomics** module integrated in **3D Slicer**. 
 
 The output of this module is a patient-level radiological feature representation.
